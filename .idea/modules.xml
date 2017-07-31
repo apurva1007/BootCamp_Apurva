@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BootCamp_Apurva.iml" filepath="$PROJECT_DIR$/BootCamp_Apurva.iml" />
       <module fileurl="file://$PROJECT_DIR$/Day1 - Hello World/Day1 - Hello World.iml" filepath="$PROJECT_DIR$/Day1 - Hello World/Day1 - Hello World.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day2 - Encapsulation(Car)/Day2 - Encapsulation(Car).iml" filepath="$PROJECT_DIR$/Day2 - Encapsulation(Car)/Day2 - Encapsulation(Car).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day2 - Inheritance(Automobile)/Day2 - Inheritance(Automobile).iml" filepath="$PROJECT_DIR$/Day2 - Inheritance(Automobile)/Day2 - Inheritance(Automobile).iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day2 - Inheritance(Furniture)/Day2 - Inheritance(Furniture).iml" filepath="$PROJECT_DIR$/Day2 - Inheritance(Furniture)/Day2 - Inheritance(Furniture).iml" />
     </modules>
   </component>
 </project>
