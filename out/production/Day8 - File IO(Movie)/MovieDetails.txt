@@ -1,0 +1,4 @@
+Movie: someMovie
+Actors: someActor
+Directors: someDirector
+Duration: someDuration
