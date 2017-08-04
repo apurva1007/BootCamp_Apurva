@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("text/html");
-        HttpSession session = request.getSession();
+
         String username = request.getParameter("user");
         String password = request.getParameter("password");
         boolean flag = false;
@@ -32,6 +32,7 @@ public class LoginServlet extends HttpServlet {
         for (Map.Entry<String, String> entry : userList.entrySet()) {
             if(entry.getKey().equals(username) && entry.getValue().equals(password)){
                 flag = true;
+                HttpSession session = request.getSession();
                 session.setAttribute("U_NAME",username);
                 session.setAttribute("PASSWORD", password);
                 session.setAttribute("LoggedInFlag", flag);
@@ -41,7 +42,9 @@ public class LoginServlet extends HttpServlet {
         }
 
         if (flag == false){
-            response.getWriter().write("Invalid!!!!!!");
+            response.getWriter().write("<h1>Invalid!!!!!!</h1>");
+            response.getWriter().write("<form method='GET' action='login.html'><input type='submit' value='LogIn' /></form>");
+
         }
     }
 
