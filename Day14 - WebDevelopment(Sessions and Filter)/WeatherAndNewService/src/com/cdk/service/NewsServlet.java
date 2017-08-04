@@ -13,6 +13,7 @@ public class NewsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         response.setContentType("text/html");
+        System.out.println("News");
         response.getWriter().write("<h2>Today News : Laden is alive</h2>");
 
         response.getWriter().write("<form method='GET' action='logout'><input type='submit' value='LOGOUT' /></form>");

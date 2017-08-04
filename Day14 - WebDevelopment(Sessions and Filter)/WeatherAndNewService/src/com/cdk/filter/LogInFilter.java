@@ -1,6 +1,7 @@
 package com.cdk.filter;
 
 import com.sun.deploy.net.HttpRequest;
+import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -16,26 +17,19 @@ public class LogInFilter implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
         HttpServletRequest request = (HttpServletRequest) req;
-        HttpSession session = request.getSession(false);
-        System.out.println(session);
-
         HttpServletResponse response = (HttpServletResponse) resp;
 
-        if (!(session == null)) {
-            boolean flag = (boolean) session.getAttribute("LoggedInFlag");
-            System.out.println(flag);
+        HttpSession session = request.getSession();
 
-            if(flag == true) {
+        if((Boolean) session.getAttribute("LoggedInFlag") == null){
+            System.out.println("redirect");
+            response.sendRedirect("/login.html");
+        }else{
+            if((Boolean) session.getAttribute("LoggedInFlag")== true) {
                 System.out.println("logggeeeddddiiiiinnn");
                 chain.doFilter(req, resp);
-            } else {
-                resp.getWriter().write("Byeeeeee");
             }
-        }else{
-            response.sendRedirect("http://localhost:5000/WeatherAndNewService/login.html");
         }
-
-
     }
 
     public void init(FilterConfig config) throws ServletException {
