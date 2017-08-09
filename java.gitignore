@@ -20,6 +20,7 @@ lib/
 .idea/
 *.iml
 *.iws
+*jar
 
 # Mac
 .DS_Store
