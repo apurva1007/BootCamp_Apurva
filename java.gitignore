@@ -1,26 +1,4 @@
-# Frameworks output
-build/
-log/
-logs/
-out/
-bin/
-target/
-lib/
-
-# Java
-*.class
-*.log
-
-# Eclipse
-.classpath
-.project
-.settings/
-
-# Intellij
-.idea/
 *.iml
-*.iws
-*jar
-
-# Mac
-.DS_Store
+*.class
+*.jar
+*.idea
